@@ -1,4 +1,6 @@
 ----------
+![papuna](https://user-images.githubusercontent.com/80822661/161820828-723867d2-b52e-46c7-a78b-01ab3a34f9ba.jpg)
+
 # Papuna Petriashvili
 ----------
 ### Contacts:
