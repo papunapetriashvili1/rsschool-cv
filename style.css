@@ -1,0 +1,98 @@
+header div {
+    text-align: center;
+    background-color: rgb(246, 238, 25);
+            border-bottom: 2px solid black;
+            padding: 2px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            
+}
+body {
+    background-color: rgba(147, 250, 165);
+    margin-right: 50px;
+    margin: 0 50px auto 0;
+    padding-left: 90px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    
+}
+
+footer a {
+    color: green;
+}
+img {
+    position: fixed;
+    right: 30px;
+    top: 0;
+    width: 80px;
+    height: 85px;
+    transition: width 2s, height 2s;   
+}
+img:hover {
+    width: 150px;
+    height: 155px;
+    
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 85px;
+    left: 0;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+#home {
+  padding: 135px 1rem 0 0;
+}
+#about {
+  padding: 135px 1rem 0 0;
+}
+#contacts {
+  padding: 135px 1rem 0 0;
+}
+#skills {
+  padding: 135px 1rem 0 0;
+}
+#codeexample {
+  padding: 135px 1rem 0 0;
+}
+#workexperience {
+  padding: 135px 1rem 0 0;
+}
+#educationandcourses {
+  padding: 120px 1rem 0 0;
+}
+#language{
+  padding: 120px 1rem 0 0;
+}
