@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papuna Petriashvili Rs School</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+          <h1>Papuna Petriashvili CV</h1>
+        </div>
+    </header>
+    
+      <div class="topnav">
+          <a class="active" href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contacts">Contacts</a>
+          <a href="#skills">Skills</a>
+          <a href="#codeexample">Code Example</a>
+          <a href="#workexperience">Work Experience</a>
+          <a href="#educationandcourses">Education And Courses</a>
+          <a href="#language">Language</a>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="home"></div>
+      <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+          Location</p>
+      
+      <p>Tbilisi, Georgia</p>
+      <a href="https://www.facebook.com/papunapetriashvili20" target="_blank">
+      <img src="https://avatars.githubusercontent.com/u/80822661?v=4" alt="None"></a>
+      
+      
+      
+      <div id="about"><h2>About Myself :</h2>
+      I want to improve myself in this field and become full-stack developer.</div>
+      <div id="contacts"><h2>Contacts :</h2>
+          <ul>
+              <li>
+                  <i  class="fab fa-discord" style='font-size:36px; color: #7289da'>
+                  </i>
+                  : papunapetriashvili1 #8417
+              </li>
+
+              <li>
+                  <i class="fa fa-mobile-phone" style='font-size:36px; color: green'></i>
+                  : +995592566767
+              </li>
+
+              <li>
+                  <i class="fa fa-envelope" style="font-size:36px; color: purple"></i>
+                  : <i>papunapetriashvili1@gmail.com</i>
+              </li>
+
+              <li>
+                  <i class="fa fa-facebook-official" style="font-size:36px; color: blue"></i>
+                  : <a href="https://www.facebook.com/papunapetriashvili20/" target="_blank" style="text-decoration: none"> Papuna Petriashvili </a>
+              </li>
+
+          </ul></div>
+      
+      <div id="skills"><h2>Skills :</h2>
+      Fundaments of
+      <ul>
+          <li>Html</li>
+          <li>CSS</li>
+          <li>JS</li>
+      </ul></div>
+      
+      <div  id="codeexample"><h2>Code Example :</h2>
+      <pre> 
+          <code> {
+          var fretHeight = 20;
+          var stringWidth = 20;
+          var textOffsetY = -3;
+          
+          var chord = {
+            name : 'A',
+            type: 'm',
+            placement: ['x', 0, 2, 2, 1, 0],
+            fingering: ['x', 0, 2, 3, 1, 0],
+          };
+          
+          var c = document.getElementById('canvas');
+          var ctx = c.getContext('2d');
+          
+          ctx.font = "18px Arial";
+          
+          function removeX(array){
+            var searchTerm = 'x';
+              cleanArray = [];
+            
+              for(n=0; n<=array.length - 1; n++){
+                  if(array[n] != searchTerm ){
+                      cleanArray.push(parseInt(array[n]));
+                  }
+              }
+              return cleanArray;
+          }
+          
+          function drawChord(chord){
+            var offsetY = 0;
+            var offsetX = 0;
+            
+              var maxPos = Math.max.apply(Math, removeX(chord.placement));
+              var minPos = Math.min.apply(Math, removeX(chord.placement));
+            
+            console.log(chord.placement);
+            
+            for(f=minPos; f<=maxPos + 1; f++){
+              ctx.beginPath();
+              
+              if(f == 0){
+                ctx.lineWidth = 4;
+              } else{
+                ctx.lineWidth = 1;
+              }
+              //draw the frets
+              ctx.moveTo(0 + stringWidth, offsetY + fretHeight);
+              ctx.lineTo(100 + stringWidth, offsetY + fretHeight);
+              ctx.strokeStyle = 'gray';
+              ctx.stroke();
+              
+              var offsetY = offsetY + 20;
+            }
+            
+            for(i=0; i< chord.placement.length; i++){    
+              var stringH = (maxPos - minPos + 1) * fretHeight;
+              
+              if(chord.placement[i] == 'x'){
+                var y = fretHeight + textOffsetY;
+              } else{
+                var y = (fretHeight * chord.placement[i]) + fretHeight + textOffsetY;
+              }
+              
+              var x = stringWidth + offsetX - (stringWidth / 4);
+              
+              //draw the strings
+              ctx.beginPath();
+              ctx.fillStyle = 'white';
+              ctx.fillRect(x, y-10, 10, 10);
+              
+              ctx.moveTo(offsetX + stringWidth, 0 + fretHeight);
+              ctx.lineTo(offsetX + stringWidth, stringH + fretHeight);
+          
+              ctx.fillStyle = 'black';
+              ctx.fillText(chord.fingering[i], x, y);
+          
+              ctx.stroke();
+              var offsetX = offsetX + stringWidth;
+            }
+          }
+          
+          drawChord(chord);
+          }
+      
+      </code></pre>
+      </div>
+      <div id="workexperience"><h2>Work Experience :</h2>
+      Nothing Yet... But I Want It
+      </div>
+      <div id="educationandcourses"><h2>Education And Courses :</h2>
+          <ol>
+              <li>
+                  <b>IBSU</b> (International Black Sea University) <b>Faculty</b> - Economics
+              </li>
+              <li>
+                  <b>Bitcamp JS Fundaments </b>(https://codehs.com/login?next=/student/3008821/section/204244/assignments)
+              </li>
+              <li>
+                  <b>Udemy - JS, CSS, HTML </b>https://www.udemy.com/course/the-ultimate-fullstack-web-development-bootcamp/
+              </li>
+              <li>
+                  <b>FreeCodeCamp Responsive Web Design </b> https://www.freecodecamp.org/certification/mrks77/responsive-web-design
+              </li>
+          </ol>
+      </div>
+      <div id="language"><h2>Language :</h2>
+          <ol>
+              <li>Georgian - Native</li>
+              <li>English - Upper Intermediate</li>
+              <li>Russian - Intermediate</li>
+              <li>Turkish - Beginner</li>
+          </ol>
+      </div>
+    
+    <footer>
+        <a href="https://github.com/papunapetriashvili1" target="_blank">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.50583 0 12.3035C0 17.7478 3.435 22.3463 8.205 23.9765C8.805 24.0842 9.03 23.715 9.03 23.3921C9.03 23.0999 9.015 22.131 9.015 21.1005C6 21.6696 5.22 20.347 4.98 19.6549C4.845 19.3012 4.26 18.2092 3.75 17.917C3.33 17.6863 2.73 17.1173 3.735 17.1019C4.68 17.0865 5.355 17.9939 5.58 18.363C6.66 20.2239 8.385 19.701 9.075 19.3781C9.18 18.5783 9.495 18.04 9.84 17.7325C7.17 17.4249 4.38 16.3637 4.38 11.6576C4.38 10.3196 4.845 9.21227 5.61 8.35102C5.49 8.04343 5.07 6.78232 5.73 5.09058C5.73 5.09058 6.735 4.76762 9.03 6.3517C9.99 6.07487 11.01 5.93645 12.03 5.93645C13.05 5.93645 14.07 6.07487 15.03 6.3517C17.325 4.75224 18.33 5.09058 18.33 5.09058C18.99 6.78232 18.57 8.04343 18.45 8.35102C19.215 9.21227 19.68 10.3042 19.68 11.6576C19.68 16.3791 16.875 17.4249 14.205 17.7325C14.64 18.1169 15.015 18.8552 15.015 20.0086C15.015 21.6542 15 22.9768 15 23.3921C15 23.715 15.225 24.0995 15.825 23.9765C18.2072 23.1519 20.2772 21.5821 21.7437 19.4881C23.2101 17.3942 23.9993 14.8814 24 12.3035C24 5.50583 18.63 0 12 0Z" fill="#B8A8AB"></path>
+          </svg>
+        </a>
+        <p>© april,2022<br>Papuna Petriashvili</p>
+        <a href="https://rs.school/" target="_blank">
+          <svg width="64" height="32" viewBox="0 0 64 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M35.1509 5.10361C33.349 5.4415 32.3267 6.46692 32.3292 7.9339C32.3318 9.50455 33.3687 10.4387 35.7623 11.0269C37.243 11.3906 37.6395 11.5468 37.9235 11.8779C38.29 12.3051 38.2677 12.6474 37.8467 13.0598C37.0059 13.8833 35.4098 13.4742 35.0846 12.3517C35.0151 12.1114 34.9288 11.8804 34.8929 11.8385C34.8231 11.7565 32.0157 11.9249 31.9223 12.0166C31.8003 12.1363 32.2544 13.4117 32.605 13.9337C33.3166 14.9937 34.4903 15.4289 36.6441 15.4314C38.0127 15.433 38.6396 15.3089 39.5051 14.8649C40.199 14.509 40.5276 14.1714 40.9401 13.3906C41.1764 12.9434 41.2225 12.72 41.2227 12.0194C41.2229 11.0529 41.0298 10.5907 40.3618 9.95878C39.8006 9.42787 39.0445 9.11288 37.1811 8.63365C35.6076 8.2289 35.2074 8.02512 35.2074 7.62822C35.2074 7.36114 35.6505 6.95221 36.0118 6.88568C36.8362 6.73399 37.5898 7.11217 37.8245 7.79539L37.9459 8.14877L38.9111 8.11257C39.4419 8.0927 40.1151 8.04562 40.4072 8.00796L40.9382 7.93955L40.79 7.36418C40.5068 6.2648 39.7646 5.5457 38.573 5.21596C37.7273 4.98205 36.0867 4.92817 35.1509 5.10361ZM0.762898 10.241V15.3147H2.36025H3.9576L3.9865 13.2486L4.0154 11.1825L4.38863 11.2107C4.59391 11.2263 4.88141 11.3252 5.02762 11.4306C5.17382 11.536 5.74967 12.4517 6.30729 13.4654L7.32121 15.3086L9.10742 15.3116C10.0899 15.3134 10.8936 15.2932 10.8936 15.2669C10.8936 15.2407 10.5505 14.5698 10.1311 13.7762C9.18036 11.9771 8.66103 11.2744 8.09968 11.0279C7.63879 10.8255 7.64721 10.8049 8.27201 10.6071C8.80723 10.4376 9.59071 9.7325 9.84099 9.1949C10.2633 8.28801 10.0288 6.71621 9.36741 6.02022C8.67649 5.29296 7.87702 5.16732 3.94245 5.16732H0.762898V10.241ZM6.04154 7.25695C6.57229 7.37757 6.84134 7.6912 6.84134 8.18936C6.84134 8.98619 6.3508 9.24563 4.84185 9.24657L3.96208 9.2472V8.20108V7.15495L4.78853 7.15746C5.24313 7.15882 5.80694 7.2036 6.04154 7.25695ZM2.89568 17.2428C0.884893 17.7917 -0.0950156 19.5498 0.717896 21.15C1.20087 22.1009 2.07552 22.614 4.12204 23.1465C5.63589 23.5405 5.8079 23.6112 6.08089 23.9515C6.74558 24.7805 5.84149 25.7101 4.55467 25.5208C3.89479 25.4237 3.36852 24.9685 3.17902 24.3309L3.0357 23.8488L2.51253 23.8717C2.22471 23.8844 1.54168 23.9237 0.994625 23.9592L0 24.0236L0.067396 24.2983C0.268304 25.1164 0.360974 25.3554 0.680679 25.8806C1.05722 26.4992 1.77213 27.0491 2.45025 27.2417C3.37492 27.5042 4.71943 27.5954 5.76204 27.4662C7.40813 27.2622 8.39049 26.6858 9.03405 25.5462C9.31228 25.0536 9.34725 24.8917 9.34608 24.1022C9.34501 23.3936 9.29799 23.1268 9.11467 22.789C8.56708 21.7799 7.63356 21.2545 5.4289 20.7145C4.64521 20.5225 3.8998 20.3108 3.77226 20.2439C3.39188 20.0441 3.29132 19.7568 3.47783 19.403C3.66786 19.0424 3.93126 18.9389 4.6402 18.9467C5.27811 18.9537 5.64548 19.1935 5.93106 19.7896L6.1405 20.2268L7.26406 20.1713C7.88203 20.1407 8.54202 20.0929 8.73067 20.065C9.05186 20.0174 9.06978 19.9927 9.01081 19.6782C8.77204 18.4042 7.97129 17.6013 6.57474 17.2353C5.90344 17.0595 3.55002 17.0643 2.89568 17.2428ZM15.0793 17.249C13.3308 17.7289 12.1806 18.95 11.7946 20.7364C11.4842 22.1731 11.665 23.9563 12.2322 25.0545C12.6663 25.8947 13.6863 26.8413 14.466 27.1275C15.9694 27.6791 18.1963 27.6522 19.4141 27.0677C20.194 26.6934 20.8661 26.0139 21.2399 25.2216C21.8172 23.998 21.8758 24.0983 20.3159 23.6372C19.2522 23.3228 18.9447 23.2658 18.9071 23.3764C18.6987 23.9898 18.1563 24.7819 17.8269 24.9541C17.3771 25.1892 16.3452 25.2148 15.927 25.0013C15.1135 24.586 14.8924 24.0024 14.8934 22.2715C14.894 21.0655 14.9211 20.8618 15.1323 20.473C15.2633 20.2317 15.5436 19.9049 15.7552 19.7466C16.5524 19.15 18.0082 19.3634 18.4471 20.1412C18.8389 20.8354 18.7184 20.8116 20.2086 20.4903C21.7503 20.158 21.689 20.2497 21.1005 19.1526C20.6898 18.3873 19.9125 17.6954 19.1264 17.3956C18.3343 17.0936 15.9593 17.0076 15.0793 17.249ZM39.5908 17.2587C37.2275 17.8821 35.9455 19.8737 36.0948 22.6899C36.2376 25.3822 37.5895 26.9603 40.1423 27.4145C42.4496 27.8251 44.6705 27.167 45.7227 25.7609L46.1053 25.2496L46.3965 25.6435C47.3647 26.9531 48.6788 27.4939 50.8834 27.49C51.982 27.4881 52.335 27.4468 52.8913 27.2556C54.1146 26.835 55.0219 26.0937 55.5246 25.1043L55.788824.5841V25.9647V27.3452H59.8944H64V26.0898V24.8345H61.494H58.988V21.0161V17.1977H57.3884H55.7888L55.7887 18.5839L55.7886 19.97L55.5534 19.4992C55.2261 18.8439 54.2491 17.9156 53.5493 17.5951C52.7354 17.2221 52.0134 17.0931 50.7406 17.0931C48.682 17.0931 47.3509 17.6748 46.3121 19.0285C46.1279 19.2683 46.0562 19.3059 46.0076 19.1876C45.9725 19.1025 45.7031 18.7833 45.4089 18.478C44.8205 17.8677 43.9313 17.3965 43.0135 17.2087C42.2259 17.0476 40.2834 17.076 39.5908 17.2587ZM24.2235 22.2715V27.3452H25.7698H27.3161V25.3052V23.2653H29.0756H30.8352V25.3052V27.3452H32.4348H34.0344V22.2715V17.1977H32.4348H30.8352V18.9762V20.7546H29.0756H27.3161V18.9762V17.1977H25.7698H24.2235V22.2715ZM42.0557 19.5038C43.2103 19.8184 43.7664 21.1382 43.5264 22.9946C43.3446 24.401 42.8125 25.0414 41.7538 25.1275C40.6293 25.2189 40.0045 24.9161 39.5575 24.0628C39.2411 23.4587 39.161 21.7686 39.4093 20.9311C39.7652 19.7301 40.8127 19.1652 42.0557 19.5038ZM51.8688 19.678C52.6694 20.1366 52.953 20.9468 52.8866 22.5853C52.8131 24.4003 52.3388 25.0485 51.0239 25.1306C50.1479 25.1853 49.8963 25.1135 49.3884 24.6632C48.8508 24.1869 48.6439 23.5365 48.6439 22.3238C48.6439 20.8077 48.9834 20.0385 49.8419 19.609C50.3926 19.3334 51.3227 19.3651 51.8688 19.678Z" fill="#B8A8AB"></path>
+          </svg>
+        </a>
+    </footer>
+
+</body>
+</html>
